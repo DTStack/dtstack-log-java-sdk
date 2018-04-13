@@ -2,8 +2,52 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fa32ca0-d19e-47bf-b2c1-3f1a8a3e0b6e" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/LogService.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/OpenLogClient.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/common/Consts.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/common/FastLog.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/common/FastLogContent.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/common/FastLogGroup.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/common/FastLogTag.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/common/LZ4Encoder.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/common/LogItem.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/common/Logs.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/common/PluginLogConfigInputDetail.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/common/QueriedLog.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/common/TagContent.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/exception/LogException.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/client/ClientConfiguration.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/client/ClientConnectionHelper.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/client/ClientConnectionStatus.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/client/ClientErrorCode.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/client/ClientException.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/client/HttpMethod.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/client/ServiceException.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/comm/DefaultServiceClient.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/comm/HttpFactory.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/comm/HttpMesssage.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/comm/RepeatableInputStreamEntity.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/comm/RequestMessage.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/comm/ResponseMessage.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/comm/ServiceClient.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/utils/CaseInsensitiveMap.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/utils/CodingUtils.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/utils/DateUtil.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/utils/ExceptionFactory.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/utils/HttpHeaders.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/utils/HttpUtil.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/request/BatchGetLogRequest.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/request/GetLogsRequest.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/request/PutLogsRequest.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/request/Request.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/response/GetLogsResponse.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/response/PutLogsResponse.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/response/Response.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/util/VarintUtil.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/dtstack-log-java-sdk.iml" afterPath="$PROJECT_DIR$/dtstack-log-java-sdk.iml" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/common.properties" afterPath="$PROJECT_DIR$/src/main/resources/common.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -17,74 +61,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="VarintUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/util/VarintUtil.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+            <state relative-caret-position="1995">
+              <caret line="209" column="68" lean-forward="false" selection-start-line="209" selection-start-column="58" selection-end-line="209" selection-end-column="68" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JsonConfigInputDetail.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/common/JsonConfigInputDetail.java">
+      <file leaf-file-name="HttpFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/comm/HttpFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="0">
-                <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FastLogTag.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/common/FastLogTag.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QueriedLog.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/common/QueriedLog.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Config.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/common/Config.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            <state relative-caret-position="234">
+              <caret line="89" column="27" lean-forward="false" selection-start-line="89" selection-start-column="27" selection-end-line="89" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -93,8 +84,8 @@
       <file leaf-file-name="LogService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/LogService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="221">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -102,38 +93,116 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OpenLogClient.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="OpenLogClient.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/OpenLogClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5270">
-              <caret line="660" column="0" lean-forward="false" selection-start-line="660" selection-start-column="0" selection-end-line="660" selection-end-column="0" />
+            <state relative-caret-position="141">
+              <caret line="242" column="39" lean-forward="true" selection-start-line="242" selection-start-column="39" selection-end-line="242" selection-end-column="39" />
               <folding>
-                <element signature="e#0#33863#0" expanded="true" />
+                <element signature="e#0#34097#0" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#2733#2734#0" expanded="true" />
-                <element signature="e#2755#2756#0" expanded="true" />
-                <element signature="e#2788#2789#0" expanded="true" />
-                <element signature="e#2811#2812#0" expanded="true" />
+                <element signature="e#2917#2918#0" expanded="true" />
+                <element signature="e#2939#2940#0" expanded="true" />
+                <element signature="e#2972#2973#0" expanded="true" />
+                <element signature="e#2995#2996#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BatchGetLogResponse.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/response/BatchGetLogResponse.java">
+      <file leaf-file-name="BatchGetLogRequest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/request/BatchGetLogRequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1955">
-              <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+            <state relative-caret-position="226">
+              <caret line="33" column="11" lean-forward="false" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServiceClient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/comm/ServiceClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="89" column="27" lean-forward="false" selection-start-line="89" selection-start-column="27" selection-end-line="89" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DefaultServiceClient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/comm/DefaultServiceClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="52">
+              <caret line="43" column="27" lean-forward="false" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RequestMessage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/comm/RequestMessage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResponseMessage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/comm/ResponseMessage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="483">
+              <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
               <folding>
-                <element signature="e#548#562#0" expanded="true" />
-                <element signature="e#667#668#0" expanded="true" />
-                <element signature="e#698#699#0" expanded="true" />
-                <element signature="e#2739#2740#0" expanded="true" />
-                <element signature="e#2769#2770#0" expanded="true" />
-                <element signature="e#3843#3844#0" expanded="true" />
-                <element signature="e#3902#3903#0" expanded="true" />
-                <element signature="e#3931#3932#0" expanded="true" />
-                <element signature="e#4007#4008#0" expanded="true" />
+                <element signature="e#822#823#0" expanded="true" />
+                <element signature="e#851#852#0" expanded="true" />
+                <element signature="e#889#890#0" expanded="true" />
+                <element signature="e#918#919#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PutLogsRequest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/request/PutLogsRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="116" column="0" lean-forward="false" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#4905#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1043#1044#0" expanded="true" />
+                <element signature="e#1069#1070#0" expanded="true" />
+                <element signature="e#1186#1187#0" expanded="true" />
+                <element signature="e#1225#1226#0" expanded="true" />
+                <element signature="e#1261#1262#0" expanded="true" />
+                <element signature="e#1287#1288#0" expanded="true" />
+                <element signature="e#1338#1339#0" expanded="true" />
+                <element signature="e#1376#1377#0" expanded="true" />
+                <element signature="e#3395#3396#0" expanded="true" />
+                <element signature="e#3418#3419#0" expanded="true" />
+                <element signature="e#3546#3547#0" expanded="true" />
+                <element signature="e#3573#3574#0" expanded="true" />
+                <element signature="e#3657#3658#0" expanded="true" />
+                <element signature="e#3677#3678#0" expanded="true" />
+                <element signature="e#3795#3796#0" expanded="true" />
+                <element signature="e#3816#3817#0" expanded="true" />
+                <element signature="e#3903#3904#0" expanded="true" />
+                <element signature="e#3924#3925#0" expanded="true" />
+                <element signature="e#4043#4044#0" expanded="true" />
+                <element signature="e#4066#4067#0" expanded="true" />
+                <element signature="e#4171#4172#0" expanded="true" />
+                <element signature="e#4194#4195#0" expanded="true" />
+                <element signature="e#4287#4288#0" expanded="true" />
+                <element signature="e#4306#4307#0" expanded="true" />
+                <element signature="e#4613#4614#0" expanded="true" />
+                <element signature="e#4664#4665#0" expanded="true" />
+                <element signature="e#4800#4801#0" expanded="true" />
+                <element signature="e#4847#4848#0" expanded="true" />
+                <element signature="e#4879#4880#0" expanded="true" />
+                <element signature="e#4901#4902#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -147,6 +216,18 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>PutLog</find>
+      <find>Base64</find>
+      <find>getSignature</find>
+      <find>getHostURIByIp</find>
+      <find>extractLogsWithFastJson</find>
+      <find>buildRequest</find>
+      <find>extractResponseBody</find>
+      <find>getLogs</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -166,9 +247,7 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/Client.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/request/BatchGetLogRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/request/Request.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/request/PutLogsRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/client/ClientConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/client/HttpMethod.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/client/ServiceException.java" />
@@ -182,10 +261,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/utils/ExceptionFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/exception/LogException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/response/BatchGetLogResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/LogService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/OpenLogClient.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/common/LogContent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/comm/ResponseMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/request/PutLogsRequest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/request/BatchGetLogRequest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/LogService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/OpenLogClient.java" />
       </list>
     </option>
   </component>
@@ -231,6 +314,37 @@
             <path>
               <item name="dtstack-log-java-sdk" type="b2602c69:ProjectViewProjectNode" />
               <item name="dtstack-log-java-sdk" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dtstack-log-java-sdk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dtstack-log-java-sdk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dtstack-log-java-sdk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dtstack-log-java-sdk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dtstack-log-java-sdk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dtstack-log-java-sdk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dtstack-log-java-sdk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dtstack-log-java-sdk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dtstack-log-java-sdk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dtstack-log-java-sdk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -372,7 +486,7 @@
       <updated>1523177160401</updated>
       <workItem from="1523177166653" duration="893000" />
       <workItem from="1523609060988" duration="208000" />
-      <workItem from="1523609603547" duration="2352000" />
+      <workItem from="1523609603547" duration="8133000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1523611907067</created>
@@ -381,11 +495,25 @@
       <option name="project" value="LOCAL" />
       <updated>1523611907067</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="init">
+      <created>1523612033422</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1523612033422</updated>
+    </task>
+    <task id="LOCAL-00003" summary="init">
+      <created>1523621728788</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1523621728788</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3453000" />
+    <option name="totallyTimeSpent" value="9234000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -399,11 +527,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329235" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.66256833" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3724784" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22190201" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329235" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="ANTLR Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -437,30 +565,6 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3553">
-          <caret line="209" column="68" lean-forward="false" selection-start-line="209" selection-start-column="58" selection-end-line="209" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/comm/HttpFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
@@ -471,14 +575,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3553">
-          <caret line="209" column="68" lean-forward="false" selection-start-line="209" selection-start-column="58" selection-end-line="209" selection-end-column="68" />
           <folding />
         </state>
       </provider>
@@ -510,14 +606,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/request/BatchGetLogRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/request/Request.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -530,55 +618,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/request/PutLogsRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#5244#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#1043#1044#0" expanded="true" />
-            <element signature="e#1069#1070#0" expanded="true" />
-            <element signature="e#1186#1187#0" expanded="true" />
-            <element signature="e#1225#1226#0" expanded="true" />
-            <element signature="e#1261#1262#0" expanded="true" />
-            <element signature="e#1287#1288#0" expanded="true" />
-            <element signature="e#1338#1339#0" expanded="true" />
-            <element signature="e#1376#1377#0" expanded="true" />
-            <element signature="e#3734#3735#0" expanded="true" />
-            <element signature="e#3757#3758#0" expanded="true" />
-            <element signature="e#3885#3886#0" expanded="true" />
-            <element signature="e#3912#3913#0" expanded="true" />
-            <element signature="e#3996#3997#0" expanded="true" />
-            <element signature="e#4016#4017#0" expanded="true" />
-            <element signature="e#4134#4135#0" expanded="true" />
-            <element signature="e#4155#4156#0" expanded="true" />
-            <element signature="e#4242#4243#0" expanded="true" />
-            <element signature="e#4263#4264#0" expanded="true" />
-            <element signature="e#4382#4383#0" expanded="true" />
-            <element signature="e#4405#4406#0" expanded="true" />
-            <element signature="e#4510#4511#0" expanded="true" />
-            <element signature="e#4533#4534#0" expanded="true" />
-            <element signature="e#4626#4627#0" expanded="true" />
-            <element signature="e#4645#4646#0" expanded="true" />
-            <element signature="e#4952#4953#0" expanded="true" />
-            <element signature="e#5003#5004#0" expanded="true" />
-            <element signature="e#5139#5140#0" expanded="true" />
-            <element signature="e#5186#5187#0" expanded="true" />
-            <element signature="e#5218#5219#0" expanded="true" />
-            <element signature="e#5240#5241#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/client/ClientConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -660,50 +699,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/comm/DefaultServiceClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="27" column="29" lean-forward="false" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/comm/HttpFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="45" column="20" lean-forward="true" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/comm/RepeatableInputStreamEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/comm/RequestMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/comm/ResponseMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/comm/ServiceClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2584">
-          <caret line="27" column="7" lean-forward="false" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -780,53 +779,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/common/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/response/BatchGetLogResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1955">
           <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
           <folding>
-            <element signature="e#548#562#0" expanded="true" />
-            <element signature="e#667#668#0" expanded="true" />
-            <element signature="e#698#699#0" expanded="true" />
-            <element signature="e#2739#2740#0" expanded="true" />
-            <element signature="e#2769#2770#0" expanded="true" />
-            <element signature="e#3843#3844#0" expanded="true" />
-            <element signature="e#3902#3903#0" expanded="true" />
-            <element signature="e#3931#3932#0" expanded="true" />
-            <element signature="e#4007#4008#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/LogService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/OpenLogClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5270">
-          <caret line="660" column="0" lean-forward="false" selection-start-line="660" selection-start-column="0" selection-end-line="660" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#33863#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#2733#2734#0" expanded="true" />
-            <element signature="e#2755#2756#0" expanded="true" />
-            <element signature="e#2788#2789#0" expanded="true" />
-            <element signature="e#2811#2812#0" expanded="true" />
+            <element signature="e#548#562#0" expanded="false" />
+            <element signature="e#667#668#0" expanded="false" />
+            <element signature="e#698#699#0" expanded="false" />
+            <element signature="e#2739#2740#0" expanded="false" />
+            <element signature="e#2769#2770#0" expanded="false" />
+            <element signature="e#3843#3844#0" expanded="false" />
+            <element signature="e#3902#3903#0" expanded="false" />
+            <element signature="e#3931#3932#0" expanded="false" />
+            <element signature="e#4007#4008#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -847,26 +813,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/common/JsonConfigInputDetail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/common/FastLogTag.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -879,6 +829,254 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/common/JsonConfigInputDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/common/ConfigInputDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/common/ConfigOutputDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/common/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-713">
+          <caret line="19" column="31" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/common/LogContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="4" column="47" lean-forward="false" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+          <folding>
+            <element signature="e#720#721#0" expanded="false" />
+            <element signature="e#747#748#0" expanded="false" />
+            <element signature="e#864#865#0" expanded="false" />
+            <element signature="e#893#894#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/common/LogItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="116" column="8" lean-forward="false" selection-start-line="116" selection-start-column="8" selection-end-line="116" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#2489#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#601#613#0" expanded="false" />
+            <element signature="e#717#718#0" expanded="false" />
+            <element signature="e#775#776#0" expanded="false" />
+            <element signature="e#921#922#0" expanded="false" />
+            <element signature="e#951#952#0" expanded="false" />
+            <element signature="e#1364#1365#0" expanded="false" />
+            <element signature="e#1394#1395#0" expanded="false" />
+            <element signature="e#1472#1473#0" expanded="false" />
+            <element signature="e#1494#1495#0" expanded="false" />
+            <element signature="e#1704#1705#0" expanded="false" />
+            <element signature="e#1747#1748#0" expanded="false" />
+            <element signature="e#1886#1887#0" expanded="false" />
+            <element signature="e#1915#1916#0" expanded="false" />
+            <element signature="e#2062#2063#0" expanded="false" />
+            <element signature="e#2117#2118#0" expanded="false" />
+            <element signature="e#2230#2231#0" expanded="false" />
+            <element signature="e#2253#2254#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/common/FastLogContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/common/Logs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="2222" column="28" lean-forward="false" selection-start-line="2222" selection-start-column="28" selection-end-line="2222" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/src.zip!/java/util/Base64.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="76" column="13" lean-forward="false" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/common/Consts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="120" column="31" lean-forward="false" selection-start-line="120" selection-start-column="31" selection-end-line="120" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/client/ClientConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="26" column="11" lean-forward="false" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1995">
+          <caret line="209" column="68" lean-forward="false" selection-start-line="209" selection-start-column="58" selection-end-line="209" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/comm/HttpFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="89" column="27" lean-forward="false" selection-start-line="89" selection-start-column="27" selection-end-line="89" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/comm/DefaultServiceClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="43" column="27" lean-forward="false" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/comm/ServiceClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="89" column="27" lean-forward="false" selection-start-line="89" selection-start-column="27" selection-end-line="89" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/comm/ResponseMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+          <folding>
+            <element signature="e#822#823#0" expanded="true" />
+            <element signature="e#851#852#0" expanded="true" />
+            <element signature="e#889#890#0" expanded="true" />
+            <element signature="e#918#919#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/http/comm/RequestMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/request/PutLogsRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="116" column="0" lean-forward="false" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#4905#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1043#1044#0" expanded="true" />
+            <element signature="e#1069#1070#0" expanded="true" />
+            <element signature="e#1186#1187#0" expanded="true" />
+            <element signature="e#1225#1226#0" expanded="true" />
+            <element signature="e#1261#1262#0" expanded="true" />
+            <element signature="e#1287#1288#0" expanded="true" />
+            <element signature="e#1338#1339#0" expanded="true" />
+            <element signature="e#1376#1377#0" expanded="true" />
+            <element signature="e#3395#3396#0" expanded="true" />
+            <element signature="e#3418#3419#0" expanded="true" />
+            <element signature="e#3546#3547#0" expanded="true" />
+            <element signature="e#3573#3574#0" expanded="true" />
+            <element signature="e#3657#3658#0" expanded="true" />
+            <element signature="e#3677#3678#0" expanded="true" />
+            <element signature="e#3795#3796#0" expanded="true" />
+            <element signature="e#3816#3817#0" expanded="true" />
+            <element signature="e#3903#3904#0" expanded="true" />
+            <element signature="e#3924#3925#0" expanded="true" />
+            <element signature="e#4043#4044#0" expanded="true" />
+            <element signature="e#4066#4067#0" expanded="true" />
+            <element signature="e#4171#4172#0" expanded="true" />
+            <element signature="e#4194#4195#0" expanded="true" />
+            <element signature="e#4287#4288#0" expanded="true" />
+            <element signature="e#4306#4307#0" expanded="true" />
+            <element signature="e#4613#4614#0" expanded="true" />
+            <element signature="e#4664#4665#0" expanded="true" />
+            <element signature="e#4800#4801#0" expanded="true" />
+            <element signature="e#4847#4848#0" expanded="true" />
+            <element signature="e#4879#4880#0" expanded="true" />
+            <element signature="e#4901#4902#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/request/BatchGetLogRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="33" column="11" lean-forward="false" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/LogService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dtstack/openservices/log/OpenLogClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="242" column="39" lean-forward="true" selection-start-line="242" selection-start-column="39" selection-end-line="242" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#34097#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2917#2918#0" expanded="true" />
+            <element signature="e#2939#2940#0" expanded="true" />
+            <element signature="e#2972#2973#0" expanded="true" />
+            <element signature="e#2995#2996#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

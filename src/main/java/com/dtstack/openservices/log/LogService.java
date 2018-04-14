@@ -5,11 +5,7 @@ package com.dtstack.openservices.log;
 
 import com.dtstack.openservices.log.common.LogItem;
 import com.dtstack.openservices.log.exception.LogException;
-import com.dtstack.openservices.log.request.BatchGetLogRequest;
-import com.dtstack.openservices.log.request.GetLogsRequest;
 import com.dtstack.openservices.log.request.PutLogsRequest;
-import com.dtstack.openservices.log.response.BatchGetLogResponse;
-import com.dtstack.openservices.log.response.GetLogsResponse;
 import com.dtstack.openservices.log.response.PutLogsResponse;
 
 import java.util.List;

@@ -34,7 +34,6 @@ public class GetLogsRequest extends Request {
 	 */
 	public GetLogsRequest(String project, String logStore, int from, int to,
 			String topic, String query) {
-		super(project);
 		mLogStore = logStore;
 		SetTopic(topic);
 		SetQuery(query);

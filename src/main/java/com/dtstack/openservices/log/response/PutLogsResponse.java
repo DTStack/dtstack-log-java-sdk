@@ -7,7 +7,7 @@ import java.util.Map;
 
 /**
  * The response of the PutData API from sls server
- * @author sls_dev
+ * @author qingya@dtstack.com
  *
  */
 public class PutLogsResponse extends Response {

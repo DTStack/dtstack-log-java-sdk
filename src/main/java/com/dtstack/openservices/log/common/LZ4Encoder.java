@@ -14,7 +14,7 @@ import net.jpountz.lz4.LZ4FastDecompressor;
 /**
  * LZ4Encoder is used to compress and decompress the log data
  * 
- * @author sls_dev
+ * @author qingya@dtstack.com
  * 
  */
 public class LZ4Encoder {
@@ -59,14 +59,7 @@ public class LZ4Encoder {
 		} catch (LZ4Exception e) {
 			throw new LogException("DecompressException", e.getMessage(), "");
 		}
-		/*
-		for (byte i:restored) {
-			if (i == 0) {
-				throw new LogException("DecompressException", "Decompressed log data contains \\0, error", "");
-			}
-		}
-		*/
-		
+
 		return restored;
 	}
 }

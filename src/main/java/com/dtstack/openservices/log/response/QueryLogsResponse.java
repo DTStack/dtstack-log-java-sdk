@@ -18,10 +18,10 @@ import com.dtstack.openservices.log.common.QueriedLog;
 /**
  * The response of the GetLog API from sls server
  * 
- * @author sls_dev
+ * @author qingya@dtstack.com
  * 
  */
-public class GetLogsResponse extends Response {
+public class QueryLogsResponse extends Response {
 
 	private static final long serialVersionUID = -7866328557378599379L;
 
@@ -43,7 +43,7 @@ public class GetLogsResponse extends Response {
 	 * @param headers
 	 *            http headers
 	 */
-	public GetLogsResponse(Map<String, String> headers) {
+	public QueryLogsResponse(Map<String, String> headers) {
 		super(headers);
 		this.SetProcessStatus(headers.get(Consts.CONST_X_SLS_PROCESS));
 

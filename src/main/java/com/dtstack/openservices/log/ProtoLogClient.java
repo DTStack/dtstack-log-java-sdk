@@ -12,9 +12,9 @@ import com.dtstack.openservices.log.http.comm.ResponseMessage;
 import com.dtstack.openservices.log.http.comm.ServiceClient;
 import com.dtstack.openservices.log.http.utils.CodingUtils;
 import com.dtstack.openservices.log.http.utils.DateUtil;
-import com.dtstack.openservices.log.request.GetLogsRequest;
+import com.dtstack.openservices.log.request.QueryLogsRequest;
 import com.dtstack.openservices.log.request.PutLogsRequest;
-import com.dtstack.openservices.log.response.GetLogsResponse;
+import com.dtstack.openservices.log.response.QueryLogsResponse;
 import com.dtstack.openservices.log.response.PutLogsResponse;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONException;
@@ -36,85 +36,24 @@ import java.util.regex.Pattern;
 import java.util.zip.Deflater;
 
 /**
- * SlsClient class is the main class in the sdk, it implements the interfaces
- * defined in LogService. It can be used to send request to the log service
- * server to put/get data.
- * 
- * @author sls_dev
+ * <p>
+ *     基于proto[B]uf数据协议实现的日志客户端，对于性能有更高要求的场景可以使用.
+ * </p>
+ * @author qingya@dtstack.com
  * 
  */
-public class LogClient implements LogService {
+public class ProtoLogClient implements LogService {
 
 	private String httpType;
 	private String hostName;
-	private String accessId;
 	private String accessKey;
 	private String sourceIp;
-	// private boolean compressFlag;
 	private ServiceClient serviceClient;
 	private String securityToken;
 	private String realIpForConsole;
 	private Boolean useSSLForConsole;
 	private String userAgent = Consts.CONST_USER_AGENT_VALUE;
 	private boolean mUUIDTag = false;
-	private Boolean mUseDirectMode = false;
-
-	public String getUserAgent() {
-		return userAgent;
-	}
-
-	public void setUserAgent(String userAgent) {
-		this.userAgent = userAgent;
-	}
-
-	public String getRealIpForConsole() {
-		return realIpForConsole;
-	}
-
-	public void setRealIpForConsole(String realIpForConsole) {
-		this.realIpForConsole = realIpForConsole;
-	}
-
-	public boolean isUseSSLForConsole() {
-		return useSSLForConsole;
-	}
-
-	public void setUseSSLForConsole(boolean useSSLForConsole) {
-		this.useSSLForConsole = useSSLForConsole;
-	}
-
-	public void ClearConsoleResources() {
-		realIpForConsole = null;
-		useSSLForConsole = null;
-	}
-
-	public void EnableUUIDTag() {
-		mUUIDTag = true;
-	}
-
-	public void DisableUUIDTag() {
-		mUUIDTag = false;
-	}
-
-	public String GetSecurityToken() {
-		return securityToken;
-	}
-
-	public void SetSecurityToken(String securityToken) {
-		this.securityToken = securityToken;
-	}
-
-	public void RemoveSecurityToken() {
-		securityToken = null;
-	}
-
-	public void EnableDirectMode() {
-		mUseDirectMode = true;
-	}
-
-	public void DisableDirectMode() {
-		mUseDirectMode = false;
-	}
 
 	/**
 	 * Construct the sls client with accessId, accessKey and server address, all
@@ -126,7 +65,7 @@ public class LogClient implements LogService {
 	 * @throws NullPointerException     if the input parameter is null
 	 * @throws IllegalArgumentException if the input parameter is empty
 	 */
-	public LogClient(String endpoint, String accessId, String accessKey) {
+	public ProtoLogClient(String endpoint, String accessId, String accessKey) {
 		this(endpoint, accessId, accessKey, GetLocalMachineIp());
 	}
 
@@ -141,8 +80,8 @@ public class LogClient implements LogService {
 	 * @throws NullPointerException     if the input parameter is null
 	 * @throws IllegalArgumentException if the input parameter is empty
 	 */
-	public LogClient(String endpoint, String accessId, String accessKey,
-					 String SourceIp) {
+	public ProtoLogClient(String endpoint, String accessId, String accessKey,
+						  String SourceIp) {
 		this(endpoint, accessId, accessKey, SourceIp,
 				Consts.DEFAULT_SLS_COMPRESS_FLAG);
 	}
@@ -160,11 +99,11 @@ public class LogClient implements LogService {
 	 * @throws NullPointerException     if the input parameter is null
 	 * @throws IllegalArgumentException if the input parameter is empty
 	 */
-	public LogClient(String endpoint, String accessId, String accessKey,
-					 String sourceIp,
-					 int connectMaxCount,
-					 int connectTimeout,
-					 int sendTimeout) {
+	public ProtoLogClient(String endpoint, String accessId, String accessKey,
+						  String sourceIp,
+						  int connectMaxCount,
+						  int connectTimeout,
+						  int sendTimeout) {
 		CodingUtils.assertStringNotNullOrEmpty(endpoint, "endpoint");
 		CodingUtils.assertStringNotNullOrEmpty(accessId, "accessId");
 		CodingUtils.assertStringNotNullOrEmpty(accessKey, "accessKey");
@@ -187,7 +126,6 @@ public class LogClient implements LogService {
 			throw new IllegalArgumentException("EndpontInvalid", new Exception(
 					"The ip address is not supported"));
 		}
-		this.accessId = accessId;
 		this.accessKey = accessKey;
 		this.sourceIp = sourceIp;
 		if (sourceIp == null || sourceIp.isEmpty()) {
@@ -213,14 +151,19 @@ public class LogClient implements LogService {
 	 * @throws NullPointerException     if the input parameter is null
 	 * @throws IllegalArgumentException if the input parameter is empty
 	 */
-	public LogClient(String endpoint, String accessId, String accessKey,
-					 String sourceIp, boolean compressFlag) {
+	public ProtoLogClient(String endpoint, String accessId, String accessKey,
+						  String sourceIp, boolean compressFlag) {
 		this(endpoint, accessId, accessKey, sourceIp,
 				Consts.HTTP_CONNECT_MAX_COUNT,
 				Consts.HTTP_CONNECT_TIME_OUT,
 				Consts.HTTP_SEND_TIME_OUT);
 	}
 
+
+	@Override
+	public QueryLogsResponse queryLogs(QueryLogsRequest request) throws LogException {
+		return null;
+	}
 
 	private URI getHostURIByIp(String ipAddress) throws LogException {
 		String endPointUrl = this.httpType + ipAddress;
@@ -257,34 +200,7 @@ public class LogClient implements LogService {
 
 	}
 
-	@Override
-	public PutLogsResponse putLogs(String project, String logStore,
-								   String topic, List<LogItem> logItems, String source,
-								   String shardHash) throws LogException {
 
-		CodingUtils.assertStringNotNullOrEmpty(project, "project");
-		CodingUtils.assertStringNotNullOrEmpty(logStore, "logStore");
-		CodingUtils.assertParameterNotNull(topic, "topic");
-		CodingUtils.assertParameterNotNull(logItems, "logGroup");
-		PutLogsRequest request = new PutLogsRequest(logStore, topic, source, logItems, shardHash);
-		request.SetCompressType(Consts.CompressType.LZ4);
-		return putLogs(request);
-
-	}
-
-	@Override
-	public PutLogsResponse putLogs(String project, String logStore,
-								   String topic, List<LogItem> logItems, String source) throws LogException {
-		CodingUtils.assertStringNotNullOrEmpty(project, "project");
-		CodingUtils.assertStringNotNullOrEmpty(logStore, "logStore");
-		CodingUtils.assertParameterNotNull(topic, "topic");
-		CodingUtils.assertParameterNotNull(logItems, "logGroup");
-		// CodingUtils.assertParameterNotNull(source, "source");
-		PutLogsRequest request = new PutLogsRequest(logStore, topic,
-				source, logItems, null);
-		request.SetCompressType(Consts.CompressType.LZ4);
-		return putLogs(request);
-	}
 
 	public PutLogsResponse putLogs(PutLogsRequest request) throws LogException {
 		CodingUtils.assertParameterNotNull(request, "request");
@@ -457,37 +373,13 @@ public class LogClient implements LogService {
 				}
 			}
 		}
-		return null; // never happen
+		return null;
 	}
 
 
 
-	public GetLogsResponse GetLogs(String project, String logStore, int from,
-								   int to, String topic, String query) throws LogException {
-		CodingUtils.assertStringNotNullOrEmpty(project, "project");
-		CodingUtils.assertStringNotNullOrEmpty(logStore, "logStore");
-		CodingUtils.assertParameterNotNull(topic, "topic");
-		CodingUtils.assertParameterNotNull(query, "query");
-		GetLogsRequest request = new GetLogsRequest(project, logStore, from,
-				to, topic, query);
-		return getLogs(request);
-	}
 
-	public GetLogsResponse GetLogs(String project, String logStore, int from,
-								   int to, String topic, String query, int line, int offset,
-								   boolean reverse) throws LogException {
-		CodingUtils.assertStringNotNullOrEmpty(project, "project");
-		CodingUtils.assertStringNotNullOrEmpty(logStore, "logStore");
-		CodingUtils.assertParameterNotNull(topic, "topic");
-		CodingUtils.assertParameterNotNull(query, "query");
-		GetLogsRequest request = new GetLogsRequest(project, logStore, from,
-				to, topic, query, offset, line, reverse);
-		return getLogs(request);
-	}
-
-
-
-	public GetLogsResponse getLogs(GetLogsRequest request) throws LogException {
+	public QueryLogsResponse getLogs(QueryLogsRequest request) throws LogException {
 		CodingUtils.assertParameterNotNull(request, "request");
 		Map<String, String> urlParameter = request.GetAllParams();
 
@@ -501,7 +393,7 @@ public class LogClient implements LogService {
 		String requestId = GetRequestId(resHeaders);
 
 		com.alibaba.fastjson.JSONArray object = parseResponseMessageToArrayWithFastJson(response, requestId);
-		GetLogsResponse getLogsResponse = new GetLogsResponse(resHeaders);
+		QueryLogsResponse getLogsResponse = new QueryLogsResponse(resHeaders);
 		extractLogsWithFastJson(getLogsResponse, object);
 		return getLogsResponse;
 
@@ -514,9 +406,6 @@ public class LogClient implements LogService {
 			return "";
 		}
 	}
-
-
-
 
 
 	@SuppressWarnings("unused")
@@ -561,7 +450,7 @@ public class LogClient implements LogService {
 	}
 
 
-	private void ExtractLogs(GetLogsResponse response, JSONArray logs) {
+	private void extractLogs(QueryLogsResponse response, JSONArray logs) {
 		try {
 			for (int i = 0; i < logs.size(); i++) {
 				JSONObject log = logs.getJSONObject(i);
@@ -819,7 +708,7 @@ public class LogClient implements LogService {
 		}
 		headers.put(Consts.CONST_CONTENT_LENGTH, String.valueOf(body.length));
 
-		getSignature(this.accessId, this.accessKey, method.toString(), headers, parameters);
+		getSignature(this.accessKey, method.toString(), headers, parameters);
 		URI uri =  getHostURIByIp(serverIp);
 
 		RequestMessage request = buildRequest(uri, method, parameters, headers,
@@ -914,7 +803,7 @@ public class LogClient implements LogService {
 	}
 
 
-	private void getSignature(String accessId, String accesskey, String verb,
+	private void getSignature(String accesskey, String verb,
 							  Map<String, String> headers,
 							  Map<String, String> urlParams) {
 		StringBuilder builder = new StringBuilder();
@@ -931,7 +820,7 @@ public class LogClient implements LogService {
 		}
 		String signature = getSignature(accesskey, builder.toString());
 		headers.put(Consts.CONST_AUTHORIZATION,
-				Consts.CONST_HEADSIGNATURE_PREFIX + accessId + ":" + signature);
+				Consts.CONST_HEADSIGNATURE_PREFIX + ":" + signature);
 	}
 
 	private static String getSignature(String accesskey, String data) {
@@ -1016,7 +905,7 @@ public class LogClient implements LogService {
 		}
 	}
 
-	private void extractLogsWithFastJson(GetLogsResponse response, com.alibaba.fastjson.JSONArray logs) {
+	private void extractLogsWithFastJson(QueryLogsResponse response, com.alibaba.fastjson.JSONArray logs) {
 		try {
 			for (int i = 0; i < logs.size(); i++) {
 				com.alibaba.fastjson.JSONObject log = logs.getJSONObject(i);
@@ -1041,7 +930,54 @@ public class LogClient implements LogService {
 
 	}
 
+	public String getUserAgent() {
+		return userAgent;
+	}
 
+	public void setUserAgent(String userAgent) {
+		this.userAgent = userAgent;
+	}
+
+	public String getRealIpForConsole() {
+		return realIpForConsole;
+	}
+
+	public void setRealIpForConsole(String realIpForConsole) {
+		this.realIpForConsole = realIpForConsole;
+	}
+
+	public boolean isUseSSLForConsole() {
+		return useSSLForConsole;
+	}
+
+	public void setUseSSLForConsole(boolean useSSLForConsole) {
+		this.useSSLForConsole = useSSLForConsole;
+	}
+
+	public void ClearConsoleResources() {
+		realIpForConsole = null;
+		useSSLForConsole = null;
+	}
+
+	public void EnableUUIDTag() {
+		mUUIDTag = true;
+	}
+
+	public void DisableUUIDTag() {
+		mUUIDTag = false;
+	}
+
+	public String GetSecurityToken() {
+		return securityToken;
+	}
+
+	public void SetSecurityToken(String securityToken) {
+		this.securityToken = securityToken;
+	}
+
+	public void RemoveSecurityToken() {
+		securityToken = null;
+	}
 
 
 

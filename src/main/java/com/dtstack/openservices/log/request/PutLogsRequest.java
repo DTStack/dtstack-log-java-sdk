@@ -219,7 +219,7 @@ public class PutLogsRequest extends Request {
 	 * @param logItems
 	 *            log data
 	 */
-	public void SetlogItems(List<LogItem> logItems) {
+	public void setLogItems(List<LogItem> logItems) {
 		mlogItems = new ArrayList<LogItem>(logItems);
 	}
 

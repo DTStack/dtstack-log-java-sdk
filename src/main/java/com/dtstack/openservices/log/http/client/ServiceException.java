@@ -28,7 +28,7 @@ package com.dtstack.openservices.log.http.client;
  * 存在错误。异常中包含了细节的信息，特别是错误代码，可以帮助调用者进行处理。
  * </p>
  * 
- * @author xiaoming.yin
+ * @author qingya@dtstack.com
  *
  */
 public class ServiceException extends RuntimeException {

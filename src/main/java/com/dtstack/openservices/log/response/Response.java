@@ -8,15 +8,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.dtstack.openservices.log.common.Consts;
-import com.dtstack.openservices.log.common.Consts;
 
 /**
- * The base response class of all sls response
+ * <p>
+ *     响应模型
+ * </p>
  * 
- * @author sls_dev
+ * @author qingya@dtstack.com
  * 
  */
 public class Response implements Serializable {
+
 	private static final long serialVersionUID = 7331835262124313824L;
 	private Map<String, String> mHeaders = new HashMap<String, String>();
 
@@ -27,7 +29,7 @@ public class Response implements Serializable {
 	 *            http headers
 	 */
 	public Response(Map<String, String> headers) {
-		SetAllHeaders(headers);
+		setAllHeaders(headers);
 	}
 
 	/**
@@ -35,8 +37,8 @@ public class Response implements Serializable {
 	 * 
 	 * @return request id
 	 */
-	public String GetRequestId() {
-		return GetHeader(Consts.CONST_X_SLS_REQUESTID);
+	public String getRequestId() {
+		return getHeader(Consts.CONST_X_SLS_REQUESTID);
 	}
 
 	/**
@@ -47,7 +49,7 @@ public class Response implements Serializable {
 	 *            key name
 	 * @return the value of the key
 	 */
-	public String GetHeader(String key) {
+	public String getHeader(String key) {
 		if (mHeaders.containsKey(key)) {
 			return mHeaders.get(key);
 		} else {
@@ -61,7 +63,7 @@ public class Response implements Serializable {
 	 * @param headers
 	 *            http headers
 	 */
-	private void SetAllHeaders(Map<String, String> headers) {
+	private void setAllHeaders(Map<String, String> headers) {
 		mHeaders = new HashMap<String, String>(headers);
 	}
 
@@ -70,7 +72,7 @@ public class Response implements Serializable {
 	 * 
 	 * @return http headers
 	 */
-	public Map<String, String> GetAllHeaders() {
+	public Map<String, String> getAllHeaders() {
 		return mHeaders;
 	}
 

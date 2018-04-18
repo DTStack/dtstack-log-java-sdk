@@ -19,14 +19,14 @@
             <name />
             <url />
             <distribution>repo</distribution>
-            <comments>Copyright (C) dtstack. All rights reserved.</comments>
+            <comments>Copyright (C) dt-stack. All rights reserved.</comments>
         </license>
     </licenses>
 
     <developers>
         <developer>
-            <id>dtstack log saas</id>
-            <name>dtstack log saas</name>
+            <id>dt-stack log sdk for SaaS</id>
+            <name>dt-stack log SaaS</name>
             <email>qingya@dtstack.com</email>
         </developer>
     </developers>
@@ -119,7 +119,7 @@
                 <configuration>
                     <forceCreation>true</forceCreation>
                     <excludes>
-                        <exclude>com/aliyun/openservices/</exclude>
+                        <exclude>com/dtstack/openservices/</exclude>
                     </excludes>
                 </configuration>
                 <executions>
@@ -131,17 +131,13 @@
                     </execution>
                 </executions>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>2.3.2</version>
-                <configuration>
-                    <excludes>
-                        <exclude>**/oms/**</exclude>
-                        <exclude>**/odps/**</exclude>
-                    </excludes>
-                </configuration>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -150,38 +146,11 @@
                     <argLine>-Xmx1024m -XX:PermSize=256m -XX:MaxPermSize=256m
                         -Dfile.encoding=UTF-8
                     </argLine>
-                    <excludes>
-                        <exclude>**/odps/**</exclude>
-                        <exclude>**/oms/**</exclude>
-                    </excludes>
                     <forkMode>once</forkMode>
                 </configuration>
             </plugin>
 
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.8</version>
-                <configuration>
-                    <encoding>UTF-8</encoding>
-                    <excludePackageNames>com.aliyun.openservices.log.http.*</excludePackageNames>
-                    <tags>
-                        <tag>
-                            <name>author</name>
-                            <placement>X</placement>
-                        </tag>
-                    </tags>
-                    <additionalparam>-Xdoclint:none</additionalparam>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
@@ -195,21 +164,6 @@
                             <exclude>net.jpountz.lz4:lz4:jar:</exclude>
                         </excludes>
                     </artifactSet>
-                    <relocations>
-                        <relocsation>
-                            <pattern>com.google.protobuf</pattern>
-                            <shadedPattern>com.aliyun.log.thirdparty.com.google.protobuf
-                            </shadedPattern>
-                        </relocsation>
-                        <relocation>
-                            <pattern>org.apache.http</pattern>
-                            <shadedPattern>com.aliyun.log.thirdparty.org.apache.http</shadedPattern>
-                        </relocation>
-                        <relocation>
-                            <pattern>org.apache.commons.beanutils</pattern>
-                            <shadedPattern>com.aliyun.log.thirdparty.org.apache.commons.beanutils</shadedPattern>
-                        </relocation>
-                    </relocations>
                     <shadedClassifierName>jar-with-dependencies</shadedClassifierName>
                     <shadedArtifactAttached>true</shadedArtifactAttached>
                 </configuration>

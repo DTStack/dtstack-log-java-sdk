@@ -11,7 +11,7 @@ import com.dtstack.openservices.log.common.Consts;
  * @author sls_dev
  * 
  */
-public class GetLogsRequest extends Request {
+public class QueryLogsRequest extends Request {
 	private static final long serialVersionUID = -484272901258629068L;
 
 	private String mLogStore;
@@ -32,8 +32,8 @@ public class GetLogsRequest extends Request {
 	 * @param query
 	 *            user query
 	 */
-	public GetLogsRequest(String project, String logStore, int from, int to,
-			String topic, String query) {
+	public QueryLogsRequest(String project, String logStore, int from, int to,
+                            String topic, String query) {
 		mLogStore = logStore;
 		SetTopic(topic);
 		SetQuery(query);
@@ -66,9 +66,9 @@ public class GetLogsRequest extends Request {
 	 *            if reverse is set to true, the query will return the latest
 	 *            logs first
 	 */
-	public GetLogsRequest(String project, String logStore, int from, int to, 
-			String topic, String query, int offset, int line,
-			boolean reverse) {
+	public QueryLogsRequest(String project, String logStore, int from, int to,
+                            String topic, String query, int offset, int line,
+                            boolean reverse) {
 		this(project, logStore,  from, to, topic, query);
 		SetOffset(offset);
 		SetLine(line);

@@ -43,7 +43,7 @@ import java.util.zip.Deflater;
  * @author sls_dev
  * 
  */
-public class OpenLogClient implements LogService {
+public class LogClient implements LogService {
 
 	private String httpType;
 	private String hostName;
@@ -126,7 +126,7 @@ public class OpenLogClient implements LogService {
 	 * @throws NullPointerException     if the input parameter is null
 	 * @throws IllegalArgumentException if the input parameter is empty
 	 */
-	public OpenLogClient(String endpoint, String accessId, String accessKey) {
+	public LogClient(String endpoint, String accessId, String accessKey) {
 		this(endpoint, accessId, accessKey, GetLocalMachineIp());
 	}
 
@@ -141,8 +141,8 @@ public class OpenLogClient implements LogService {
 	 * @throws NullPointerException     if the input parameter is null
 	 * @throws IllegalArgumentException if the input parameter is empty
 	 */
-	public OpenLogClient(String endpoint, String accessId, String accessKey,
-						 String SourceIp) {
+	public LogClient(String endpoint, String accessId, String accessKey,
+					 String SourceIp) {
 		this(endpoint, accessId, accessKey, SourceIp,
 				Consts.DEFAULT_SLS_COMPRESS_FLAG);
 	}
@@ -160,11 +160,11 @@ public class OpenLogClient implements LogService {
 	 * @throws NullPointerException     if the input parameter is null
 	 * @throws IllegalArgumentException if the input parameter is empty
 	 */
-	public OpenLogClient(String endpoint, String accessId, String accessKey,
-						 String sourceIp,
-						 int connectMaxCount,
-						 int connectTimeout,
-						 int sendTimeout) {
+	public LogClient(String endpoint, String accessId, String accessKey,
+					 String sourceIp,
+					 int connectMaxCount,
+					 int connectTimeout,
+					 int sendTimeout) {
 		CodingUtils.assertStringNotNullOrEmpty(endpoint, "endpoint");
 		CodingUtils.assertStringNotNullOrEmpty(accessId, "accessId");
 		CodingUtils.assertStringNotNullOrEmpty(accessKey, "accessKey");
@@ -213,8 +213,8 @@ public class OpenLogClient implements LogService {
 	 * @throws NullPointerException     if the input parameter is null
 	 * @throws IllegalArgumentException if the input parameter is empty
 	 */
-	public OpenLogClient(String endpoint, String accessId, String accessKey,
-						 String sourceIp, boolean compressFlag) {
+	public LogClient(String endpoint, String accessId, String accessKey,
+					 String sourceIp, boolean compressFlag) {
 		this(endpoint, accessId, accessKey, sourceIp,
 				Consts.HTTP_CONNECT_MAX_COUNT,
 				Consts.HTTP_CONNECT_TIME_OUT,

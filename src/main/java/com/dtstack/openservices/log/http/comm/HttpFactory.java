@@ -44,7 +44,7 @@ class HttpFactory {
     /**
      * Creates a HttpClient instance.
      * @param config
-     *          OpenLogClient configuration.
+     *          LogClient configuration.
      * @return HttpClient instance.
      */
     public HttpClient createHttpClient(ClientConfiguration config){
